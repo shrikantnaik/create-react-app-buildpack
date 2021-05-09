@@ -26,6 +26,8 @@ BP_DIR=`cd $(dirname $0); cd ..; pwd`
 # Switch to new Node auto build behavior ahead of release
 export NEW_BUILD_SCRIPT_BEHAVIOR=true
 
+set INLINE_RUNTIME_CHUNK=false
+
 # Use architecture of multi-buildpack to compose behavior.
 # https://github.com/heroku/heroku-buildpack-multi
 cp $BP_DIR/.buildpacks $BUILD_DIR/.buildpacks
